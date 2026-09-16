@@ -12,6 +12,13 @@ const IMG_HISPOP   = "assets/img/artist-hispop.jpg";
 const IMG_TONER    = "assets/img/artist-toner.jpg";
 
 /* ══════════════════ assets ══════════════════ */
+const SNS = {
+ instagram:"https://www.instagram.com/gimhaemusicfestival_salmon/",
+ youtube  :"https://www.youtube.com/@GHMF2006"
+};
+const IC_IG='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>';
+const IC_YT='<svg width="27" height="27" viewBox="0 0 24 24" fill="none"><rect x="2" y="4.8" width="20" height="14.4" rx="4.2" stroke="currentColor" stroke-width="1.8"/><path d="M10.2 9.3v5.4l4.7-2.7z" fill="currentColor"/></svg>';
+
 const IMGMAP={A_JKC:IMG_JKC,A_COUNTRY:IMG_COUNTRY,A_ADIOS:IMG_ADIOS,A_WILD:IMG_WILD,A_HISPOP:IMG_HISPOP,A_TONER:IMG_TONER};
 document.getElementById("brandLogo").src=IMG_LOGO;
 document.getElementById("footLogo").src=IMG_LOGO;
@@ -214,6 +221,31 @@ function pgHome(){
        </div>
        <a class="btn p" href="#/booth">모집 요강 보기 ${IC_ARROW}</a>
      </div>
+   </div>
+ </div></section>
+
+ <section class="blk"><div class="wrap">
+   <div class="shead"><div class="lbl">Channels</div><h2>연어의 소식을 가장 먼저</h2></div>
+   <p class="slead">라인업 확정·부스 모집·당일 현장은 두 채널에서 먼저 올라옵니다.</p>
+   <div class="chan" style="margin-top:32px">
+     <a href="${SNS.instagram}" target="_blank" rel="noopener">
+       <span class="ic">${IC_IG}</span>
+       <span class="tx">
+         <b>인스타그램</b>
+         <span>@gimhaemusicfestival_salmon</span>
+         <small>포스터 · 출연진 공개 · 부스 모집 공고 · 현장 스케치</small>
+       </span>
+       <span class="go">${IC_ARROW}</span>
+     </a>
+     <a href="${SNS.youtube}" target="_blank" rel="noopener">
+       <span class="ic">${IC_YT}</span>
+       <span class="tx">
+         <b>유튜브</b>
+         <span>@GHMF2006</span>
+         <small>역대 공연 영상 · 100인의 연어 아카이브 · 하이라이트</small>
+       </span>
+       <span class="go">${IC_ARROW}</span>
+     </a>
    </div>
  </div></section>
 
