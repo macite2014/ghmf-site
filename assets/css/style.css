@@ -54,11 +54,14 @@ nav.main a:hover{color:var(--tx);background:var(--surface-2)}
 nav.main a.on{color:var(--orange);font-weight:700}
 .iconbtn{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--surface);border-radius:10px;color:var(--tx-2)}
 .iconbtn:hover{border-color:var(--orange);color:var(--orange)}
+.sns{display:flex;gap:6px;flex:0 0 auto;margin-left:12px}
+.sns a{text-decoration:none}
 .burger{display:none}
 @media(max-width:940px){
   nav.main{position:fixed;inset:66px 0 auto 0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 22px 20px;gap:2px;align-items:stretch;display:none}
   nav.main.open{display:flex}
   nav.main a{padding:13px 8px;font-size:16px}
+  .sns{margin-left:auto}
   .burger{display:grid}
 }
 
@@ -237,6 +240,26 @@ section.blk.t{border-bottom:1px solid var(--line)}
 .boothband .in{padding:44px 42px;display:flex;gap:34px;align-items:center;justify-content:space-between;flex-wrap:wrap}
 .boothband h2{font-size:clamp(25px,3.2vw,34px);color:#fff}
 .boothband p{color:rgba(255,255,255,.86);margin-top:12px;font-size:15.5px;max-width:52ch}
+
+/* ═══════ channels ═══════ */
+.chan{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:700px){.chan{grid-template-columns:1fr}}
+.chan a{
+  display:flex;align-items:center;gap:20px;text-decoration:none;
+  background:var(--surface);border:1px solid var(--line-2);border-radius:16px;
+  padding:26px 28px;transition:.16s;box-shadow:var(--shadow);
+}
+.chan a:hover{border-color:var(--orange);transform:translateY(-2px)}
+.chan .ic{
+  flex:0 0 auto;width:54px;height:54px;border-radius:14px;display:grid;place-items:center;
+  background:var(--surface-2);border:1px solid var(--line-2);color:var(--orange-lift);
+}
+.chan a:hover .ic{background:var(--orange);border-color:var(--orange);color:#fff}
+.chan .tx b{display:block;font-size:19px;font-weight:900;letter-spacing:-.02em}
+.chan .tx span{display:block;font-size:13.5px;color:var(--tx-3);margin-top:4px;font-family:Archivo;letter-spacing:.02em}
+.chan .tx small{display:block;font-size:13px;color:var(--tx-2);margin-top:9px;line-height:1.6}
+.chan .go{margin-left:auto;color:var(--tx-3);flex:0 0 auto}
+.chan a:hover .go{color:var(--orange-lift)}
 
 /* ═══════ footer ═══════ */
 footer{background:var(--surface);border-top:1px solid var(--line);padding:58px 0 44px}
