@@ -315,7 +315,7 @@ function pgAbout(){
    <div class="shead"><div class="lbl">Site Plan</div><h2>행사장 배치</h2></div>
    <p class="slead">봉황대공원 잔디마당(A)과 가야의길 광장(B), 두 구역에서 열립니다. 부스는 행사장 바깥 테두리를 따라 단열로 배치해 부스에 앉아서도 무대가 보이도록 했습니다.</p>
    <div class="imgbox" style="margin-top:26px"><a href="${IMG_LAYOUT}" target="_blank" rel="noopener"><img src="${IMG_LAYOUT}" alt="제21회 연어 행사장 배치도 — 잔디마당 A존과 가야의길 광장 B존"></a></div>
-   <p class="cap">현장 항공사진 기반 배치도 · 이미지를 누르면 크게 볼 수 있습니다. 세부 배치는 문화재 현상변경 허가와 현장 실측 결과에 따라 조정될 수 있습니다.</p>
+   <p class="cap">일러스트 배치도 · 이미지를 누르면 크게 볼 수 있습니다. 세부 배치는 문화재 현상변경 허가와 현장 실측 결과에 따라 조정될 수 있습니다.</p>
    <div class="grid g2" style="margin-top:28px">
      <div class="card"><div class="lbl">Zone A · 잔디마당</div><h3 style="margin-top:9px">메인스테이지와 아트마켓</h3><p>STAGE A 메인무대 · 객석 · 아트마켓·체험부스 11동 · 뮤직마켓 · 드로잉존 · 인제대 홍보안내 · 웰컴게이트·등록</p></div>
      <div class="card"><div class="lbl">Zone B · 가야의길 광장</div><h3 style="margin-top:9px">서브 스테이지와 B존 부스</h3><p>STAGE B 서브 스테이지 · B존 부스 7동. 가야의길 쪽에서 들어오면 가장 먼저 만나는 무대입니다.</p></div>
@@ -390,7 +390,7 @@ function pgProgram(tab){
    <div class="shead"><div class="lbl">Market</div><h2>아트마켓 &amp; 로컬 체험부스</h2></div>
    <p class="slead">부스 20동 · AM 10 ~ PM 8 운영. 김해·경남 지역 창작자, 공방, 사회적경제 조직, 이주민 셀러가 참여합니다.</p>
    <div class="imgbox" style="margin-top:28px"><a href="${IMG_LAYOUT}" target="_blank" rel="noopener"><img src="${IMG_LAYOUT}" alt="아트마켓 배치도"></a></div>
-   <p class="cap">현장 항공사진 기반 배치도 — 부스를 마주보게 두지 않고, 행사장 바깥 테두리를 따라 단열로 배치했습니다. A존 11동 · B존 7동 외 뮤직마켓·드로잉존.</p>
+   <p class="cap">일러스트 배치도 — 부스를 마주보게 두지 않고, 행사장 바깥 테두리를 따라 단열로 배치했습니다. A존 11동 · B존 7동 외 뮤직마켓·드로잉존.</p>
    <div class="grid g2" style="margin-top:36px;max-width:960px">
      <div class="card"><h3>부스에서도 무대가 보입니다</h3><p>부스를 마주보게 배치하면 셀러는 하루 종일 무대를 등지고 앉습니다. 바깥 테두리 단열 배치로 셀러도 관객이 되도록 했습니다.</p></div>
      <div class="card"><h3>다회용기 운영</h3><p>식음 구역에 다회용기와 반납처를 운영합니다. 지난 회 피드백을 반영해 반납처를 분산 배치합니다.</p></div>
