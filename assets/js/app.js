@@ -300,7 +300,7 @@ function pgAbout(){
      <tr><td class="k">주최</td><td>사회적협동조합 김해문화네트워크 · 사단법인 맥커뮤니티</td></tr>
      <tr><td class="k">주관</td><td>주식회사 엠에이사이트 · 음악이주는선물 · PLP · 인제대학교 글로컬사업단</td></tr>
      <tr><td class="k">협력</td><td>김해시 · 김해대학교 · 스튜디오우아 · 문화기획사 동행 · 모먼츠 · 소리나무 · 자연음미 · 경남음악창작소 뮤지시스 · (주)그린임팩트</td></tr>
-     <tr><td class="k">구성</td><td>메인스테이지 7팀 · 부스 20동 · 김해시청소년축제 모여락</td></tr>
+     <tr><td class="k">구성</td><td>메인스테이지 7팀 · 부스 20동 · 김해시청소년축제 뛰어락</td></tr>
    </tbody></table></div>
    <p class="cap">봉황대공원(봉황동유적)은 국가지정 사적입니다. 무대·부스 등 시설물 설치는 문화재 현상변경 허가 절차에 따라 진행합니다.</p>
  </div></section>
@@ -321,7 +321,7 @@ function pgAbout(){
    <p class="cap">일러스트 배치도 · 이미지를 누르면 크게 볼 수 있습니다. 세부 배치는 문화재 현상변경 허가와 현장 실측 결과에 따라 조정될 수 있습니다.</p>
    <div class="grid g2" style="margin-top:28px">
      <div class="card"><div class="lbl">Zone A · 잔디마당</div><h3 style="margin-top:9px">메인스테이지와 부스</h3><p>STAGE A 메인무대 · 객석 · FOH(콘솔부스) · 인제대 홍보부스 · 뮤직마켓 · 드로잉존 · 종합상황실 · 웰컴게이트·등록</p></div>
-     <div class="card"><div class="lbl">Zone B · 가야의길 광장</div><h3 style="margin-top:9px">서브 스테이지</h3><p>STAGE B 서브 스테이지 · 객석 · 출연진 대기부스 · 부스. 가야의길 쪽에서 들어오면 가장 먼저 만나는 무대입니다.</p></div>
+     <div class="card"><div class="lbl">Zone B · 가야의길 광장</div><h3 style="margin-top:9px">청소년축제 뛰어락</h3><p>STAGE B 청소년축제 뛰어락 · 객석 · 출연진 대기부스 · 부스. 가야의길 쪽에서 들어오면 가장 먼저 만나는 무대입니다.</p></div>
      <div class="card"><h3>주 출입구</h3><p>북동쪽 주차장(분성로) 방면 웰컴게이트. 등록과 안내를 이곳에서 합니다.</p></div>
      <div class="card"><h3>보조 출입구 · 구역 이동</h3><p>서쪽 가야의길에서 B존으로 들어올 수 있습니다. A존과 B존은 남서쪽 산책로로 이어지며 경사 구간이 있어 야간에는 조명과 안내 인력을 배치합니다.</p></div>
    </div>
@@ -344,7 +344,7 @@ function pgAbout(){
 
 function pgProgram(tab){
  const T=tab||"salmon";
- const tabs=[["salmon","김해뮤직페스티벌 연어"],["moyeorak","김해시청소년축제 모여락"],["market","아트마켓 & 로컬 체험부스"]];
+ const tabs=[["salmon","김해뮤직페스티벌 연어"],["moyeorak","김해시청소년축제 뛰어락"],["market","아트마켓 & 로컬 체험부스"]];
  let body="";
 
  if(T==="salmon"){
@@ -374,7 +374,7 @@ function pgProgram(tab){
 
  if(T==="moyeorak"){
   body=`
-   <div class="shead"><div class="lbl">Youth</div><h2>김해시청소년축제 모여락</h2></div>
+   <div class="shead"><div class="lbl">Youth</div><h2>김해시청소년축제 뛰어락</h2></div>
    <p class="slead">같은 날, 같은 공간. 「오늘의 관객이 내일의 연어」 — 순환의 첫 단계인 ① 치어 트랙이 여기서 시작됩니다.</p>
    <div class="grid g3" style="margin-top:32px">
      <div class="card"><div class="lbl">01</div><h3 style="margin-top:9px">정식 라인업 편성</h3><p>청소년 밴드를 오프닝이 아니라 정식 라인업으로 편성합니다. 하루의 첫 정식 무대(13:00)를 청소년에게 배정합니다.</p></div>
