@@ -1,6 +1,7 @@
 /* ══════════════════ image paths ══════════════════ */
 const IMG_POSTER   = "assets/img/poster.jpg";
 const IMG_TIMELINE = "assets/img/timeline.jpg";
+const IMG_TIMETABLE = "assets/img/timetable.jpg";
 const IMG_LAYOUT   = "assets/img/layout.jpg";
 const IMG_LOGO     = "assets/img/logo.png";
 const IMG_GHMF     = "assets/img/ghmf.png";
@@ -162,6 +163,7 @@ function cycBlock(){
 }
 
 /* ══════════════════ pages ══════════════════ */
+function boothOpen(){ return Date.now() < new Date("2026-09-24T00:00:00+09:00").getTime(); }
 function pgHome(){
  return `
  <section class="hero tex">${TEX("o",11,' data-dens="0.9"')}
@@ -177,8 +179,9 @@ function pgHome(){
          <span class="chip">전면 <b>무료</b> · 전 연령</span>
        </div>
        <div class="cta">
-         <a class="btn p" href="#/program">라인업 보기 ${IC_ARROW}</a>
-         <a class="btn g" href="#/booth">부스 운영팀 모집</a>
+         ${boothOpen()?`<a class="btn p" href="${BOOTH_FORM}" target="_blank" rel="noopener" data-ev="booth_form_click">부스 신청 · 9/23 마감 ${IC_ARROW}</a>`:""}
+         <a class="btn ${boothOpen()?"g":"p"}" href="#/program">타임테이블 · 라인업 ${boothOpen()?"":IC_ARROW}</a>
+         <a class="btn g" href="guide/">관람 안내</a>
        </div>
      </div>
      <div class="posterbox"><img src="${IMG_POSTER}" alt="제21회 김해뮤직페스티벌 연어 포스터"></div>
@@ -350,7 +353,9 @@ function pgProgram(tab){
    <p class="slead">① 치어 1팀 · ③ 회귀 6팀. 추천·공모 팀은 협의·선정 후 순차 공개합니다.</p>
    <div class="grid g3" style="margin-top:32px">${LINEUP.map(artCard).join("")}</div>
 
-   <h2 style="margin-top:68px;font-size:28px">당일 진행 — 하루의 서사</h2>
+   <h2 style="margin-top:68px;font-size:28px">타임테이블</h2>
+   <div class="imgbox" style="margin-top:22px"><a href="${IMG_TIMETABLE}" target="_blank" rel="noopener"><img src="${IMG_TIMETABLE}" alt="제21회 김해뮤직페스티벌 연어 타임테이블 — STAGE A 14:00 김해청소년밴드부터 20:30 잭킹콩까지"></a></div>
+   <h2 style="margin-top:48px;font-size:24px">시간대별 진행</h2>
    <div class="day" style="margin-top:28px;max-width:860px">
      ${DAY.map(r=>`<div class="r">
        <div class="t">${esc(r[0])}</div>
@@ -511,7 +516,7 @@ function pgInfo(sub){
  if(S==="community") body=`<div class="shead"><div class="lbl">Community</div><h2>커뮤니티</h2></div>
    <p class="slead">관람 후기, 질문, 제안을 남기는 공간입니다.</p>
    <div style="margin-top:26px">${boardRows("community",DB.community)}</div>
-   <p class="cap">※ 시안에서는 글쓰기 기능이 비활성화되어 있습니다. 실제 배포 시 회원/비회원 글쓰기와 스팸 필터를 함께 적용합니다.</p>`;
+   <p class="cap">질문과 후기는 <a href="${SNS.instagram}" target="_blank" rel="noopener">인스타그램 @gimhaemusicfestival_salmon</a> DM 또는 카카오채널로 보내주세요.</p>`;
  if(S==="magazine") body=`<div class="shead"><div class="lbl">Magazine</div><h2>김해컬쳐매거진 (GCM)</h2></div>
    <p class="slead">2018년 창간. 연어와 함께 발행하는 김해 지역 문화 정기간행물입니다. 제7호부터는 축제 종료 후에 발행해 「연어 로컬임팩트 분석」을 싣습니다.</p>
    <div class="grid g3" style="margin-top:30px">
