@@ -260,7 +260,7 @@ function pgHome(){
 
  <section class="blk"><div class="wrap">
    <div class="shead"><div class="lbl">21 Years</div><h2>연어가 걸어온 길</h2></div>
-   <div class="imgbox" style="margin-top:26px"><img src="${IMG_TIMELINE}" alt="연어 21년 연혁 타임라인"></div>
+   <div class="imgbox" style="margin-top:26px"><a href="${IMG_TIMELINE}" target="_blank" rel="noopener" title="크게 보기"><img src="${IMG_TIMELINE}" alt="연어 21년 연혁 타임라인"></a></div>
    <p class="cap">2006년 제1회부터 2025년 제20회까지의 연혁 아카이브. 회차별 상세는 행사소개 페이지에서 볼 수 있습니다.</p>
  </div></section>`;
 }
@@ -311,7 +311,7 @@ function pgAbout(){
    <div class="river" style="margin-top:34px;max-width:840px">
      ${HISTORY.map(h=>`<div class="node"><div class="yr">${esc(h.y)}</div><h4>${esc(h.t)}</h4><p>${esc(h.d)}</p></div>`).join("")}
    </div>
-   <div class="imgbox" style="margin-top:30px"><img src="${IMG_TIMELINE}" alt="연어 연혁 타임라인"></div>
+   <div class="imgbox" style="margin-top:30px"><a href="${IMG_TIMELINE}" target="_blank" rel="noopener" title="크게 보기"><img src="${IMG_TIMELINE}" alt="연어 연혁 타임라인"></a></div>
  </div></section>
 
  <section class="blk"><div class="wrap">
@@ -528,7 +528,7 @@ function pgInfo(sub){
    </div>`;
  if(S==="gallery") body=`<div class="shead"><div class="lbl">Gallery</div><h2>연어갤러리</h2></div>
    <p class="slead">21년간의 현장 기록.</p>
-   <div class="imgbox" style="margin:28px 0 12px"><img src="${IMG_TIMELINE}" alt="연어 연혁 아카이브"></div>
+   <div class="imgbox" style="margin:28px 0 12px"><a href="${IMG_TIMELINE}" target="_blank" rel="noopener" title="크게 보기"><img src="${IMG_TIMELINE}" alt="연어 연혁 아카이브"></a></div>
    <p class="cap">연어가 걸어온 길 — 1회(2006)부터 20회(2025)까지</p>
    <div class="gal" style="margin-top:32px">
      ${GALLERY.map(g=>`<div class="it"><div>
