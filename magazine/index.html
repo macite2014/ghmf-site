@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김해컬쳐매거진 (GCM) 온라인 열람 | 제21회 김해뮤직페스티벌 연어</title>
+<meta name="description" content="김해컬쳐매거진(GCM) 창간호부터 제6호까지, 2017 연어 매거진까지 홈페이지에서 바로 넘겨 볼 수 있습니다. 2018년 창간, 연어와 함께 발행하는 김해 지역 문화 정기간행물입니다.">
+<link rel="canonical" href="https://ghmf.kr/magazine/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="김해뮤직페스티벌 연어">
+<meta property="og:title" content="김해컬쳐매거진 (GCM) 온라인 열람">
+<meta property="og:description" content="창간호(2018)부터 제6호(2025)까지 김해컬쳐매거진 전권을 홈페이지에서 바로 넘겨 볼 수 있습니다.">
+<meta property="og:url" content="https://ghmf.kr/magazine/">
+<meta property="og:image" content="https://ghmf.kr/assets/img/og-share.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12100F">
+<link rel="icon" href="/assets/img/ghmf.png">
+<link rel="stylesheet" href="/assets/css/static.css">
+<style>
+.mags{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px;margin:26px 0 10px;padding:0;list-style:none}
+.mag{background:var(--s1);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.mag .cv{display:block;width:100%;background:#0E0C0B;border:0;padding:0;cursor:pointer}
+.mag .cv img{width:100%;height:auto;display:block;transition:opacity .15s}
+.mag .cv:hover img{opacity:.82}
+.mag .meta{padding:13px 14px 15px}
+.mag .vol{color:var(--orl);font-size:12px;font-weight:800;letter-spacing:.06em}
+.mag h3{margin:6px 0 4px;font-size:16px;line-height:1.35}
+.mag .sub{color:var(--tx3);font-size:13px;margin:0 0 10px}
+.mag .acts{display:flex;gap:8px;flex-wrap:wrap}
+.mag .read{background:var(--or);color:#fff;border:0;border-radius:999px;padding:8px 15px;font-weight:800;font-size:14px;cursor:pointer;font-family:inherit}
+.mag .dl{color:var(--tx2);text-decoration:none;font-size:13px;align-self:center}
+.soon{opacity:.6}
+.soon .cvbox{aspect-ratio:3/4.24;display:flex;align-items:center;justify-content:center;color:var(--tx3);font-size:14px;background:#0E0C0B;border-bottom:1px solid var(--line)}
+/* reader */
+.rd{position:fixed;inset:0;background:#0B0A09;z-index:50;display:none;flex-direction:column}
+.rd.on{display:flex}
+.rd .bar{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--line);background:#12100F;flex-wrap:wrap}
+.rd .ttl{font-weight:800;font-size:15px;color:var(--tx);margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:48vw}
+.rd button,.rd a.b{background:#241E1A;color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;text-decoration:none;line-height:1.2}
+.rd button:disabled{opacity:.35;cursor:default}
+.rd .pg{font-variant-numeric:tabular-nums;color:var(--tx2);font-size:14px;min-width:86px;text-align:center}
+.rd .stage{flex:1;overflow:auto;display:flex;align-items:flex-start;justify-content:center;padding:14px;-webkit-overflow-scrolling:touch}
+.rd canvas{max-width:100%;height:auto;background:#fff;border-radius:4px;box-shadow:0 10px 36px rgba(0,0,0,.6)}
+.rd .load{color:var(--tx3);font-size:14px;padding:40px 0}
+.rd .close{background:var(--or);border-color:var(--or);color:#fff}
+@media(max-width:560px){.rd .ttl{max-width:38vw;font-size:13px}.rd button,.rd a.b{padding:7px 10px;font-size:13px}}
+</style>
+</head>
+<body>
+<header class="sh"><div class="w">
+<a class="logo" href="/"><img src="/assets/img/logo.png" alt="연어" width="72" height="36"><span>GHMF</span></a>
+<nav><a href="/">홈</a><a href="/about/">행사소개</a><a href="/program/">프로그램·타임테이블</a><a href="/guide/">관람 안내</a><a href="/booth/">부스 모집</a><a href="/magazine/" aria-current="page">김해컬쳐매거진</a><a href="/faq/">자주 묻는 질문</a><a href="/history/">21년 연혁</a></nav></div></header>
+<main class="w">
+<h1>김해컬쳐매거진 (GCM)</h1>
+<p class="lead">2018년 창간. 연어와 함께 발행하는 김해 지역 문화 정기간행물입니다. 지난 호 전권을 홈페이지에서 바로 넘겨 볼 수 있습니다.</p>
+<p class="note">표지를 누르면 열람기가 열립니다. 좌우 버튼 · 키보드 화살표 · 휴대폰에서는 좌우로 밀어 넘깁니다.</p>
+
+<ul class="mags" id="mags"></ul>
+
+<h2>발행 안내</h2>
+<p>제7호(2026년 11월 발행 예정)부터는 축제가 끝난 뒤에 발행해 「연어 로컬임팩트 분석」을 싣습니다. 지난 호에 실린 글의 저작권은 각 필자와 발행처에 있습니다. 인용·재수록은 사무국으로 문의해 주세요.</p>
+<p class="fact">제21회 김해뮤직페스티벌 연어는 2026년 10월 17일(토) 오전 10시부터 오후 10시까지 김해 봉황대공원(김해시 봉황동 465)에서 열리며, 전면 무료입니다.</p>
+</main>
+<footer class="sf"><div class="w">
+<p><b>제21회 김해뮤직페스티벌 연어</b> · 2026. 10. 17.(토) 10:00–22:00 · 봉황대공원(김해시 봉황동 465) · 전면 무료 · 전 연령</p>
+<p>주최 사회적협동조합 김해문화네트워크 · 사단법인 맥커뮤니티 | 주관 주식회사 엠에이사이트 · 음악이주는선물 · PLP · 인제대학교 글로컬사업단</p>
+<p>문의 055-723-2284 · wonjae@macc.or.kr · <a href="https://www.instagram.com/gimhaemusicfestival_salmon/">인스타그램 @gimhaemusicfestival_salmon</a> · <a href="https://www.youtube.com/@GHMF2006">유튜브 @GHMF2006</a></p>
+<p class="nav2"><a href="/">홈</a> · <a href="/about/">행사소개</a> · <a href="/program/">프로그램·타임테이블</a> · <a href="/guide/">관람 안내</a> · <a href="/booth/">부스 모집</a> · <a href="/magazine/">김해컬쳐매거진</a> · <a href="/faq/">자주 묻는 질문</a> · <a href="/history/">21년 연혁</a></p>
+</div></footer>
+
+<div class="rd" id="rd" role="dialog" aria-modal="true" aria-label="매거진 열람기">
+  <div class="bar">
+    <span class="ttl" id="rdTtl"></span>
+    <button id="prev" aria-label="이전 면">◀</button>
+    <span class="pg" id="pg">– / –</span>
+    <button id="next" aria-label="다음 면">▶</button>
+    <a class="b" id="dl" href="#" download>내려받기</a>
+    <button class="close" id="close">닫기</button>
+  </div>
+  <div class="stage" id="stage"><div class="load">불러오는 중…</div></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+var ISSUES=[
+ {id:"gcm-06",vol:"제6호",date:"2025. 10.",title:"연어들의 스무 번째 귀환",sub:"20주년 기념호 · 60면",pages:60},
+ {id:"gcm-04",vol:"제4호",date:"2023. 09.",title:"GCM Vol.4",sub:"표지 가수 정홍일 · 35면",pages:35},
+ {id:"gcm-03",vol:"제3호",date:"2022. 10.",title:"연어, 모든 이름 없는 자들을 위한 세레나데",sub:"펼침면 14면",pages:14},
+ {id:"gcm-02",vol:"제2호",date:"2019. 10.",title:"김해문화매거진 제2호",sub:"경남출신 아티스트 디렉토리 수록 · 19면",pages:19},
+ {id:"gcm-01",vol:"창간호",date:"2018. 09.",title:"김해컬쳐매거진 창간호",sub:"ARTISTS in Gyeongnam 수록 · 44면",pages:44},
+ {id:"2017-brochure",vol:"아카이브",date:"2017. 08.",title:"2017 연어 매거진",sub:"제12회 연어 기록 · 44면",pages:44}
+];
+(function(){
+ var ul=document.getElementById("mags"),h="";
+ ISSUES.forEach(function(m){
+  h+='<li class="mag"><button class="cv" data-id="'+m.id+'" aria-label="'+m.title+' 열람"><img src="/assets/img/mag/'+m.id+'.jpg" alt="'+m.title+' 표지" loading="lazy"></button>'+
+     '<div class="meta"><div class="vol">'+m.vol+' · '+m.date+'</div><h3>'+m.title+'</h3><p class="sub">'+m.sub+'</p>'+
+     '<div class="acts"><button class="read" data-id="'+m.id+'">바로 보기</button><a class="dl" href="/assets/mag/'+m.id+'.pdf" download>PDF 내려받기</a></div></div></li>';
+ });
+ h+='<li class="mag soon"><div class="cvbox">2026년 11월 발행 예정</div><div class="meta"><div class="vol">제7호 · 2026. 11.</div><h3>연어가 남긴 것 — 로컬임팩트 원년</h3><p class="sub">「연어 로컬임팩트 분석」 첫 수록</p></div></li>';
+ ul.innerHTML=h;
+})();
+
+pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+var rd=document.getElementById("rd"),stage=document.getElementById("stage"),pgEl=document.getElementById("pg"),
+    ttl=document.getElementById("rdTtl"),dl=document.getElementById("dl"),
+    btnPrev=document.getElementById("prev"),btnNext=document.getElementById("next"),
+    doc=null,page=1,total=0,busy=false,cur=null;
+
+function openIssue(id){
+ var m=null;ISSUES.forEach(function(x){if(x.id===id)m=x;});if(!m)return;
+ cur=m;page=1;total=0;ttl.textContent=m.vol+" "+m.title;dl.href="/assets/mag/"+m.id+".pdf";
+ stage.innerHTML='<div class="load">불러오는 중…</div>';rd.classList.add("on");
+ document.body.style.overflow="hidden";
+ if(location.hash.slice(1)!==id)history.replaceState(null,"","#"+id);
+ pdfjsLib.getDocument({url:"/assets/mag/"+m.id+".pdf"}).promise.then(function(d){
+   doc=d;total=d.numPages;render();
+ }).catch(function(){ stage.innerHTML='<div class="load">열람기를 불러오지 못했습니다. PDF 내려받기로 확인해 주세요.</div>'; });
+}
+function closeIssue(){
+ rd.classList.remove("on");document.body.style.overflow="";
+ if(doc){doc.destroy&&doc.destroy();doc=null;}
+ history.replaceState(null,"",location.pathname);
+}
+function render(){
+ if(!doc||busy)return;busy=true;
+ doc.getPage(page).then(function(p){
+  var vw=stage.clientWidth-28,vh=stage.clientHeight-28,v1=p.getViewport({scale:1});
+  var scale=Math.min(vw/v1.width,vh/v1.height);if(!isFinite(scale)||scale<=0)scale=1;
+  var dpr=Math.min(window.devicePixelRatio||1,2),vp=p.getViewport({scale:scale*dpr});
+  var c=document.createElement("canvas");c.width=vp.width;c.height=vp.height;
+  c.style.width=Math.floor(vp.width/dpr)+"px";c.style.height=Math.floor(vp.height/dpr)+"px";
+  return p.render({canvasContext:c.getContext("2d"),viewport:vp}).promise.then(function(){
+    stage.innerHTML="";stage.appendChild(c);
+    pgEl.textContent=page+" / "+total;
+    btnPrev.disabled=page<=1;btnNext.disabled=page>=total;busy=false;
+  });
+ }).catch(function(){busy=false;});
+}
+function go(d){var n=page+d;if(n<1||n>total)return;page=n;render();}
+document.addEventListener("click",function(e){
+ var t=e.target.closest("[data-id]");
+ if(t){openIssue(t.getAttribute("data-id"));return;}
+ if(e.target.id==="close")closeIssue();
+ if(e.target.id==="prev")go(-1);
+ if(e.target.id==="next")go(1);
+});
+document.addEventListener("keydown",function(e){
+ if(!rd.classList.contains("on"))return;
+ if(e.key==="ArrowLeft")go(-1);
+ if(e.key==="ArrowRight")go(1);
+ if(e.key==="Escape")closeIssue();
+});
+var sx=0,sy=0;
+stage.addEventListener("touchstart",function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+stage.addEventListener("touchend",function(e){
+ var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
+ if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)go(dx<0?1:-1);
+},{passive:true});
+var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(function(){if(doc)render();},200);});
+if(location.hash.length>1)openIssue(location.hash.slice(1));
+</script>
+</body></html>
