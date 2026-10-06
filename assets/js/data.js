@@ -124,6 +124,7 @@ const BOOTH_ZONES=[
  {t:"회귀존",h:"回歸",d:"김해를 떠나 넓은 바다를 경험하고 다시 고향으로 돌아온 로컬 브랜드"},
  {t:"산란존",h:"産卵",d:"페스티벌과 함께 성장해 다음 세대 창작자를 이끌어줄 베테랑 팀"}
 ];
+const CHEER_FORM="https://docs.google.com/forms/d/e/1FAIpQLSeja1MTOmClwl5w6AkBcsCAWJ6AzhLAQmrQXqUi4rch0Dq5UQ/viewform";
 const BOOTH_FORM="https://docs.google.com/forms/d/1zjzJaUOHrDdBVAxSyK8w4ok5COh5aK7KZDNS4CA8p3U/viewform";
 
 const P100=[

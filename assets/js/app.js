@@ -559,6 +559,8 @@ function pgInfo(sub){
    <p class="cap">※ 시안에서는 결제 기능이 연결되어 있지 않습니다. 실제 배포 시 외부 결제 모듈 또는 현장 판매로 운영합니다.</p>`;
  if(S==="cheer") body=`<div class="shead"><div class="lbl">Cheerleader</div><h2>치어리더</h2></div>
    <p class="slead">연어를 지속가능하게 만드는 후원그룹. 로고를 걸어드리는 대가로 후원을 받는 관계가 아니라, 후원이 무엇을 만들었는지 숫자로 돌려드리는 관계를 지향합니다.</p>
+   <p style="margin-top:18px"><a class="btn p" href="${CHEER_FORM}" target="_blank" rel="noopener" data-ev="cheer_form_click">치어리더 후원 신청하기 ${IC_ARROW}</a></p>
+   <p class="cap" style="margin-top:10px">상시 접수합니다. 신청서를 보내주시면 기재하신 연락처로 후원 계좌와 안내를 보내드립니다.</p>
    <div class="grid g2" style="margin-top:30px;max-width:960px">
      <div class="card"><div class="lbl">Type A</div><h3 style="margin-top:9px">1만 명 시민후원</h3><p>시민 개인 후원. 축제가 특정 기관의 예산에 의존하지 않고 시민의 지지로 서는 구조를 만드는 것이 목표입니다.</p></div>
      <div class="card"><div class="lbl">Type B</div><h3 style="margin-top:9px">기업 · 단체 후원</h3><p>지역 기업·단체 후원. 후원 규모에 따른 노출뿐 아니라, 후원금이 어느 트랙에 쓰였는지를 명시해 보고합니다.</p></div>
@@ -569,7 +571,12 @@ function pgInfo(sub){
    </div>
    <h2 style="margin-top:58px;font-size:28px">치어리더 운영위원회</h2>
    <p class="slead">2023년 제18회에 구성한 「축제 지속가능성 자문단」을 21회부터 개칭하고 13인으로 재정비합니다. 자문은 의견을 주는 자리이고, 치어리더는 연결하고 검증하고 응원하는 자리입니다.</p>
-   <p class="cap" style="margin-top:14px">※ 위원회는 의결기구가 아니라 연결·검증기구이며, 최종 의사결정과 예산 집행은 주최·주관과 코어 크루가 갖습니다.</p>`;
+   <p class="cap" style="margin-top:14px">※ 위원회는 의결기구가 아니라 연결·검증기구이며, 최종 의사결정과 예산 집행은 주최·주관과 코어 크루가 갖습니다.</p>
+   <div class="card" style="margin-top:44px;text-align:center;padding:30px 24px">
+     <h3 style="font-size:22px">함께 숲이 되어 주세요</h3>
+     <p style="margin-top:8px">시민 한 사람의 후원도, 기업·단체의 후원도 같은 자리에서 시작합니다.</p>
+     <p style="margin-top:18px"><a class="btn p" href="${CHEER_FORM}" target="_blank" rel="noopener" data-ev="cheer_form_click">치어리더 후원 신청하기 ${IC_ARROW}</a></p>
+   </div>`;
 
  return pagehead("d",25,"Information","Information","공지사항 · 커뮤니티 · 매거진 · 갤러리 · 상점 · 후원 안내")+`
  <section class="blk"><div class="wrap">
