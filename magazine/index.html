@@ -125,8 +125,8 @@ function closeIssue(){
  history.replaceState(null,"",location.pathname);
 }
 function render(){
- if(!doc||busy)return;busy=true;
- doc.getPage(page).then(function(p){
+ if(!doc||busy)return; busy=true; var target=page;
+ doc.getPage(target).then(function(p){
   var vw=stage.clientWidth-28,vh=stage.clientHeight-28,v1=p.getViewport({scale:1});
   var scale=Math.min(vw/v1.width,vh/v1.height);if(!isFinite(scale)||scale<=0)scale=1;
   var dpr=Math.min(window.devicePixelRatio||1,2),vp=p.getViewport({scale:scale*dpr});
@@ -134,8 +134,9 @@ function render(){
   c.style.width=Math.floor(vp.width/dpr)+"px";c.style.height=Math.floor(vp.height/dpr)+"px";
   return p.render({canvasContext:c.getContext("2d"),viewport:vp}).promise.then(function(){
     stage.innerHTML="";stage.appendChild(c);
-    pgEl.textContent=page+" / "+total;
-    btnPrev.disabled=page<=1;btnNext.disabled=page>=total;busy=false;
+    pgEl.textContent=target+" / "+total;
+    btnPrev.disabled=target<=1;btnNext.disabled=target>=total;busy=false;
+    if(page!==target)render();
   });
  }).catch(function(){busy=false;});
 }
