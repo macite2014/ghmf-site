@@ -29,16 +29,18 @@ community:[
 magazines:[
  {id:21,vol:"제7호",year:"2026",title:"연어가 남긴 것 — 로컬임팩트 원년",date:"2026-11",pages:"60p",cover:"준비 중",
   body:"제21회 연어의 사후 기록과 「연어 로컬임팩트 분석」 12p를 처음 싣는 호입니다.\n\n· RECORD 연어 2026, 그날의 기록 13p\n· IMPACT 연어 로컬임팩트 분석 12p (신설)\n· GIMHAE PEOPLE 사람 8p\n· CULTURE PLACE 공간 6p\n· LOCAL ISSUE 지역문화 3.0 6p\n· NEXT 22회와 함께하는 방법 2p\n\n※ 2026년 11월 발행 예정. 발행 시점을 축제 종료 후로 옮깁니다."},
- {id:22,vol:"제6호",year:"2025",title:"연어들의 스무 번째 귀환",date:"2025-10",pages:"60p",cover:"20주년호",
+ {id:22,file:"gcm-06",vol:"제6호",year:"2025",title:"연어들의 스무 번째 귀환",date:"2025-10",pages:"60p",cover:"20주년호",
   body:"20주년 기념호. 「김해 문화의 여정 20년의 이야기」(장원재), 「연어가 거슬러온 길」 연혁 타임라인, 법정문화도시 김해 5년의 성과와 비전, 도고뮤직포레스티벌 사례를 실었습니다.\n\n필진 11인 · 디자인 장원재·엄성진 · 표지 이장원·엄성진"},
- {id:23,vol:"제4호",year:"2023",title:"GCM Vol.4",date:"2023-09",pages:"68p",cover:"가수 정홍일",
+ {id:23,file:"gcm-04",vol:"제4호",year:"2023",title:"GCM Vol.4",date:"2023-09",pages:"68p",cover:"가수 정홍일",
   body:"역대 최대 분량. Culture Place / Gimhae People / Future Planning / Expert Opinion 4개 섹션 체계를 완성한 호입니다.\n\n필진 16인 · 디자인 인제대학교 U디자인학과 산학협력"},
- {id:24,vol:"제3호",year:"2022",title:"연어, 모든 이름 없는 자들을 위한 세레나데",date:"2022-10",pages:"26p",cover:"제17회",
+ {id:24,file:"gcm-03",vol:"제3호",year:"2022",title:"연어, 모든 이름 없는 자들을 위한 세레나데",date:"2022-10",pages:"26p",cover:"제17회",
   body:"발행번호 김문넷 가02210. INTERVIEW / SPACE / PEOPLE 체계가 처음 등장한 호입니다."},
- {id:25,vol:"제2호",year:"2019",title:"김해문화매거진 제2호",date:"2019-10",pages:"36p",cover:"제14회",
+ {id:25,file:"gcm-02",vol:"제2호",year:"2019",title:"김해문화매거진 제2호",date:"2019-10",pages:"36p",cover:"제14회",
   body:"「경남출신 아티스트」 디렉토리 5p 수록. DIY콘서트 시즌3, 공간 준(June), 기타리스트 임덕규 인터뷰."},
- {id:26,vol:"제1호",year:"2018",title:"김해컬쳐매거진 창간호",date:"2018-09",pages:"44p",cover:"제13회",
-  body:"「ARTISTS in Gyeongnam」 경남출신 아티스트 디렉토리 8p를 실은 창간호. 지역의 문화공간을 찾다, 김해문화포럼, 주목할 아티스트 윤연휘."}
+ {id:26,file:"gcm-01",vol:"제1호",year:"2018",title:"김해컬쳐매거진 창간호",date:"2018-09",pages:"44p",cover:"제13회",
+  body:"「ARTISTS in Gyeongnam」 경남출신 아티스트 디렉토리 8p를 실은 창간호. 지역의 문화공간을 찾다, 김해문화포럼, 주목할 아티스트 윤연휘."},
+ {id:27,file:"2017-brochure",vol:"아카이브",year:"2017",title:"2017 연어 매거진",date:"2017-08",pages:"44p",cover:"제12회",
+  body:"제12회 연어의 기록을 담은 매거진형 브로슈어. 김해컬쳐매거진 창간 이전 자료로, 아카이브 차원에서 함께 공개합니다."}
 ],
 goods:[
  {id:31,name:"연어 로고 티셔츠",price:"25,000원",tag:"NEW",desc:"오가닉 코튼 · 연어 워드마크 프린트"},

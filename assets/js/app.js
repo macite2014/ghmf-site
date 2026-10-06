@@ -518,13 +518,16 @@ function pgInfo(sub){
    <div style="margin-top:26px">${boardRows("community",DB.community)}</div>
    <p class="cap">질문과 후기는 <a href="${SNS.instagram}" target="_blank" rel="noopener">인스타그램 @gimhaemusicfestival_salmon</a> DM 또는 카카오채널로 보내주세요.</p>`;
  if(S==="magazine") body=`<div class="shead"><div class="lbl">Magazine</div><h2>김해컬쳐매거진 (GCM)</h2></div>
-   <p class="slead">2018년 창간. 연어와 함께 발행하는 김해 지역 문화 정기간행물입니다. 제7호부터는 축제 종료 후에 발행해 「연어 로컬임팩트 분석」을 싣습니다.</p>
-   <div class="grid g3" style="margin-top:30px">
-     ${DB.magazines.map(m=>`<a class="card link" href="#/post/magazines/${m.id}">
+   <p class="slead">2018년 창간. 연어와 함께 발행하는 김해 지역 문화 정기간행물입니다. 지난 호 전권을 홈페이지에서 바로 넘겨 볼 수 있습니다.</p>
+   <p style="margin-top:14px"><a class="btn" href="/magazine/">매거진 열람실 열기 →</a></p>
+   <div class="grid g3" style="margin-top:26px">
+     ${DB.magazines.map(m=>`<a class="card link" href="${m.file?("/magazine/#"+m.file):("#/post/magazines/"+m.id)}"${m.file?' target="_blank" rel="noopener"':''}>
+       ${m.file?`<div class="imgbox" style="margin:-4px 0 12px"><img src="assets/img/mag/${esc(m.file)}.jpg" alt="${esc(m.title)} 표지" loading="lazy"></div>`:``}
        <div class="lbl">${esc(m.vol)} · ${esc(m.year)}</div>
        <h3 style="margin-top:9px">${esc(m.title)}</h3>
        <div style="font-size:13px;color:var(--tx-3);margin-top:7px">${esc(m.date)} · ${esc(m.pages)} · 표지 ${esc(m.cover)}</div>
-       <p>${esc(String(m.body).split("\n")[0])}</p></a>`).join("")}
+       <p>${esc(String(m.body).split("\n")[0])}</p>
+       ${m.file?`<div style="margin-top:10px;color:var(--or);font-weight:800;font-size:14px">바로 보기 →</div>`:`<div style="margin-top:10px;color:var(--tx-3);font-size:14px">발행 예정</div>`}</a>`).join("")}
    </div>`;
  if(S==="gallery") body=`<div class="shead"><div class="lbl">Gallery</div><h2>연어갤러리</h2></div>
    <p class="slead">21년간의 현장 기록.</p>
