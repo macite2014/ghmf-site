@@ -1,5 +1,14 @@
 /* ══════════════════ image paths ══════════════════ */
 const IMG_POSTER   = "assets/img/poster.jpg";
+const MAGS=[
+ {f:"gcm-06",v:"제6호",y:"2025. 10.",t:"연어들의 스무 번째 귀환",s:"20주년 기념호 · 60면"},
+ {f:"gcm-04",v:"제4호",y:"2023. 09.",t:"GCM Vol.4",s:"표지 가수 정홍일 · 35면"},
+ {f:"gcm-03",v:"제3호",y:"2022. 10.",t:"연어, 모든 이름 없는 자들을 위한 세레나데",s:"펼침면 14면"},
+ {f:"gcm-02",v:"제2호",y:"2019. 10.",t:"김해문화매거진 제2호",s:"경남출신 아티스트 디렉토리 · 19면"},
+ {f:"gcm-01",v:"창간호",y:"2018. 09.",t:"김해컬쳐매거진 창간호",s:"ARTISTS in Gyeongnam 수록 · 44면"},
+ {f:"2017-brochure",v:"아카이브",y:"2017. 08.",t:"2017 연어 매거진",s:"제12회 연어 기록 · 44면"},
+ {f:"",v:"제7호",y:"2026. 11.",t:"연어가 남긴 것 — 로컬임팩트 원년",s:"「연어 로컬임팩트 분석」 첫 수록"}
+];
 const IMG_TIMELINE = "assets/img/timeline.jpg";
 const IMG_TIMETABLE = "assets/img/timetable.jpg";
 const IMG_LAYOUT   = "assets/img/layout.jpg";
@@ -521,13 +530,12 @@ function pgInfo(sub){
    <p class="slead">2018년 창간. 연어와 함께 발행하는 김해 지역 문화 정기간행물입니다. 지난 호 전권을 홈페이지에서 바로 넘겨 볼 수 있습니다.</p>
    <p style="margin-top:14px"><a class="btn" href="/magazine/">매거진 열람실 열기 →</a></p>
    <div class="grid g3" style="margin-top:26px">
-     ${DB.magazines.map(m=>`<a class="card link" href="${m.file?("/magazine/#"+m.file):("#/post/magazines/"+m.id)}"${m.file?' target="_blank" rel="noopener"':''}>
-       ${m.file?`<div class="imgbox" style="margin:-4px 0 12px"><img src="assets/img/mag/${esc(m.file)}.jpg" alt="${esc(m.title)} 표지" loading="lazy"></div>`:``}
-       <div class="lbl">${esc(m.vol)} · ${esc(m.year)}</div>
-       <h3 style="margin-top:9px">${esc(m.title)}</h3>
-       <div style="font-size:13px;color:var(--tx-3);margin-top:7px">${esc(m.date)} · ${esc(m.pages)} · 표지 ${esc(m.cover)}</div>
-       <p>${esc(String(m.body).split("\n")[0])}</p>
-       ${m.file?`<div style="margin-top:10px;color:var(--or);font-weight:800;font-size:14px">바로 보기 →</div>`:`<div style="margin-top:10px;color:var(--tx-3);font-size:14px">발행 예정</div>`}</a>`).join("")}
+     ${MAGS.map(m=>`<a class="card link" href="${m.f?("/magazine/#"+m.f):"#/info/magazine"}">
+       ${m.f?`<div class="imgbox" style="margin:-4px 0 12px"><img src="assets/img/mag/${m.f}.jpg" alt="${esc(m.t)} 표지" loading="lazy"></div>`:``}
+       <div class="lbl">${esc(m.v)} · ${esc(m.y)}</div>
+       <h3 style="margin-top:9px">${esc(m.t)}</h3>
+       <div style="font-size:13px;color:var(--tx-3);margin-top:7px">${esc(m.s)}</div>
+       <div style="margin-top:10px;color:${m.f?"var(--or)":"var(--tx-3)"};font-weight:800;font-size:14px">${m.f?"바로 보기 →":"2026년 11월 발행 예정"}</div></a>`).join("")}
    </div>`;
  if(S==="gallery") body=`<div class="shead"><div class="lbl">Gallery</div><h2>연어갤러리</h2></div>
    <p class="slead">21년간의 현장 기록.</p>
