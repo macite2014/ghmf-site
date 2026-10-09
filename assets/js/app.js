@@ -20,6 +20,7 @@ const IMG_ADIOS    = "assets/img/artist-adios-audio.jpg";
 const IMG_WILD     = "assets/img/artist-wild-crew.jpg";
 const IMG_HISPOP   = "assets/img/artist-hispop.jpg";
 const IMG_TONER    = "assets/img/artist-toner.jpg";
+const IMG_MC       = "assets/img/artist-mc-johbokhyun.jpg";
 
 /* ══════════════════ assets ══════════════════ */
 const SNS = {
@@ -361,6 +362,17 @@ function pgProgram(tab){
    <div class="shead"><div class="lbl">Main Stage</div><h2>메인스테이지 7팀</h2></div>
    <p class="slead">① 치어 1팀 · ③ 회귀 6팀. 추천·공모 팀은 협의·선정 후 순차 공개합니다.</p>
    <div class="grid g3" style="margin-top:32px">${LINEUP.map(artCard).join("")}</div>
+
+   <h2 style="margin-top:68px;font-size:28px">사회</h2>
+   <p class="slead">무대 위 뮤지션과 무대 아래 시민을 잇는 자리입니다.</p>
+   <div class="grid g3" style="margin-top:32px">
+     <article class="art"><div class="ph"><img src="${IMG_MC}" alt="사회자 조복현"><span class="tag">MC</span></div><div class="b">
+       <div class="en">JO BOK HYUN</div>
+       <h3>조복현</h3>
+       <div class="gr">방송인 · MBC경남 라디오 DJ</div>
+       <p>MBC경남 「아침의 행진」을 진행하며 20년 동안 라디오 마이크 앞에서 음악과 사연을 전해 왔습니다. 경남 곳곳의 음악회와 토크콘서트를 이끌어 온 진행자입니다. 라디오로만 듣던 목소리를 올가을 봉황대공원에서 직접 만나실 수 있습니다.</p>
+     </div></article>
+   </div>
 
    <h2 style="margin-top:68px;font-size:28px">타임테이블</h2>
    <div class="imgbox" style="margin-top:22px"><a href="${IMG_TIMETABLE}" target="_blank" rel="noopener"><img src="${IMG_TIMETABLE}" alt="제21회 김해뮤직페스티벌 연어 타임테이블 — STAGE A 14:00 김해청소년밴드부터 20:30 잭킹콩까지"></a></div>
