@@ -375,7 +375,7 @@ function pgProgram(tab){
    </div>
 
    <h2 style="margin-top:68px;font-size:28px">타임테이블</h2>
-   <div class="imgbox" style="margin-top:22px"><a href="${IMG_TIMETABLE}" target="_blank" rel="noopener"><img src="${IMG_TIMETABLE}" alt="제21회 김해뮤직페스티벌 연어 타임테이블 — STAGE A 14:00 김해청소년밴드부터 20:30 잭킹콩까지"></a></div>
+   <div class="imgbox" style="margin-top:22px"><a href="${IMG_TIMETABLE}" target="_blank" rel="noopener"><img src="${IMG_TIMETABLE}" alt="제21회 김해뮤직페스티벌 연어 타임테이블 — STAGE A 14:00 리엔드부터 20:30 잭킹콩까지"></a></div>
    <h2 style="margin-top:48px;font-size:24px">시간대별 진행</h2>
    <div class="day" style="margin-top:28px;max-width:860px">
      ${DAY.map(r=>`<div class="r">
@@ -403,7 +403,7 @@ function pgProgram(tab){
      <div class="card"><div class="lbl">03</div><h3 style="margin-top:9px">멘토링 세션</h3><p>16:00 전환 시간에 메인스테이지 출연진과 청소년 팀이 만나는 멘토링 세션을 배치합니다.</p></div>
      <div class="card"><div class="lbl">04</div><h3 style="margin-top:9px">합동 무대</h3><p>20:00 마지막 무대에서 청소년 밴드 전원이 귀향 아티스트와 함께 한 곡을 연주합니다.</p></div>
      <div class="card"><div class="lbl">05</div><h3 style="margin-top:9px">청소년 기획단</h3><p>공연뿐 아니라 운영에도 참여합니다. 서포터즈 → 실행 크루로 이어지는 경로를 청소년에게도 동일하게 엽니다.</p></div>
-     <div class="card"><div class="lbl">06</div><h3 style="margin-top:9px">협력</h3><p>김해시청소년센터 · 김해청년다옴과 공동 기획하며, 김해청소년밴드가 메인스테이지 라인업에 포함됩니다.</p></div>
+     <div class="card"><div class="lbl">06</div><h3 style="margin-top:9px">협력</h3><p>김해시청소년센터 · 김해청년다옴과 공동 기획하며, 김해청소년밴드(리엔드·바다사자)가 메인스테이지 라인업에 포함됩니다.</p></div>
    </div>
    <div class="note g" style="margin-top:36px;max-width:840px">
      <p><strong>제6회(2011)의 사례.</strong><br>
