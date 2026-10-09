@@ -208,7 +208,7 @@ function pgHome(){
  </div></section>
 
  <section class="blk"><div class="wrap">
-   <div class="shead"><div class="lbl">Line-up</div><h2>메인스테이지 7팀</h2></div>
+   <div class="shead"><div class="lbl">Line-up</div><h2>메인스테이지 8팀</h2></div>
    <p class="slead">라인업을 장르로 나누지 않고 연어의 생애주기로 편성합니다. 무대의 순서가 곧 지역 음악 생태계의 순환 구조입니다.</p>
    <div class="grid g3" style="margin-top:32px">${LINEUP.slice(0,3).map(artCard).join("")}</div>
    <div style="margin-top:24px"><a class="btn g" style="border-color:var(--line-2);color:var(--tx-2)" href="#/program">전체 라인업 · 당일 진행 ${IC_ARROW}</a></div>
@@ -310,7 +310,7 @@ function pgAbout(){
      <tr><td class="k">주최</td><td>사회적협동조합 김해문화네트워크 · 사단법인 맥커뮤니티</td></tr>
      <tr><td class="k">주관</td><td>주식회사 엠에이사이트 · 음악이주는선물 · PLP · 인제대학교 글로컬사업단</td></tr>
      <tr><td class="k">협력</td><td>김해시 · 김해대학교 · 스튜디오우아 · 문화기획사 동행 · 모먼츠 · 소리나무 · 자연음미 · 경남음악창작소 뮤지시스 · (주)그린임팩트</td></tr>
-     <tr><td class="k">구성</td><td>메인스테이지 7팀 · 부스 20동 · 김해시청소년축제 뛰어락</td></tr>
+     <tr><td class="k">구성</td><td>메인스테이지 8팀 · 부스 20동 · 김해시청소년축제 뛰어락</td></tr>
    </tbody></table></div>
    <p class="cap">봉황대공원(봉황동유적)은 국가지정 사적입니다. 무대·부스 등 시설물 설치는 문화재 현상변경 허가 절차에 따라 진행합니다.</p>
  </div></section>
@@ -359,8 +359,8 @@ function pgProgram(tab){
 
  if(T==="salmon"){
   body=`
-   <div class="shead"><div class="lbl">Main Stage</div><h2>메인스테이지 7팀</h2></div>
-   <p class="slead">① 치어 1팀 · ③ 회귀 6팀. 추천·공모 팀은 협의·선정 후 순차 공개합니다.</p>
+   <div class="shead"><div class="lbl">Main Stage</div><h2>메인스테이지 8팀</h2></div>
+   <p class="slead">① 치어 2팀 · ③ 회귀 6팀. 추천·공모 팀은 협의·선정 후 순차 공개합니다.</p>
    <div class="grid g3" style="margin-top:32px">${LINEUP.map(artCard).join("")}</div>
 
    <h2 style="margin-top:68px;font-size:28px">사회</h2>
