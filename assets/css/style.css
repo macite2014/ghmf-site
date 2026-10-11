@@ -311,3 +311,10 @@ footer .fl img{height:32px;margin-bottom:14px}
 .bs.d{color:#E2705C;border-color:#5A322A}
 .toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:var(--tx);color:var(--ink);padding:13px 24px;border-radius:11px;font-size:14px;font-weight:700;z-index:99;box-shadow:var(--shadow)}
 .hide{display:none!important}
+
+/* ═══════ 당신에게 연어란 (Padlet) ═══════ */
+.padbox{border:1px solid var(--line-2);border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.padbox iframe{width:100%;display:block;border:0;padding:0;margin:0}
+.memband{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:center}
+.memband .mtx p{color:var(--tx-2);font-size:15.5px;max-width:46ch}
+@media(max-width:860px){.memband{grid-template-columns:1fr}.memband .mpv .padbox iframe{height:480px!important}}
