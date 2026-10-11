@@ -21,6 +21,8 @@ const IMG_WILD     = "assets/img/artist-wild-crew.jpg";
 const IMG_HISPOP   = "assets/img/artist-hispop.jpg";
 const IMG_TONER    = "assets/img/artist-toner.jpg";
 const IMG_MC       = "assets/img/artist-mc-johbokhyun.jpg";
+const IMG_LIEND    = "assets/img/artist-liend.jpg";
+const IMG_BADASAJA = "assets/img/artist-badasaja.jpg";
 
 /* ══════════════════ assets ══════════════════ */
 const SNS = {
@@ -30,7 +32,7 @@ const SNS = {
 const IC_IG='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></svg>';
 const IC_YT='<svg width="27" height="27" viewBox="0 0 24 24" fill="none"><rect x="2" y="4.8" width="20" height="14.4" rx="4.2" stroke="currentColor" stroke-width="1.8"/><path d="M10.2 9.3v5.4l4.7-2.7z" fill="currentColor"/></svg>';
 
-const IMGMAP={A_JKC:IMG_JKC,A_COUNTRY:IMG_COUNTRY,A_ADIOS:IMG_ADIOS,A_WILD:IMG_WILD,A_HISPOP:IMG_HISPOP,A_TONER:IMG_TONER};
+const IMGMAP={A_JKC:IMG_JKC,A_COUNTRY:IMG_COUNTRY,A_ADIOS:IMG_ADIOS,A_WILD:IMG_WILD,A_HISPOP:IMG_HISPOP,A_TONER:IMG_TONER,A_LIEND:IMG_LIEND,A_BADASAJA:IMG_BADASAJA};
 document.getElementById("brandLogo").src=IMG_LOGO;
 document.getElementById("footLogo").src=IMG_LOGO;
 
@@ -234,6 +236,21 @@ function pgHome(){
        </div>
        <a class="btn p" href="#/booth">모집 요강 보기 ${IC_ARROW}</a>
      </div>
+   </div>
+ </div></section>
+
+ <section class="blk"><div class="wrap">
+   <div class="shead"><div class="lbl">Your Salmon</div><h2>당신에게 연어란</h2></div>
+   <p class="slead">21년을 만든 것은 무대가 아니라 그 앞에 서 있던 사람들입니다. 여러분이 기억하는 연어를 한 줄 남겨주세요. 로그인 없이 누구나 쓸 수 있습니다.</p>
+   <div class="memband" style="margin-top:30px">
+     <div class="mtx">
+       <p>무대에 섰던 기억, 객석에서 본 장면, 부스에서 만난 사람, 비 오던 날 — 몇 회차였는지 기억나지 않아도 괜찮습니다. 사진도 함께 올릴 수 있고, 다른 분의 글에 댓글을 달 수 있습니다.</p>
+       <div class="cta" style="margin-top:20px">
+         <a class="btn p" href="#/memory">이야기 남기기 ${IC_ARROW}</a>
+         <a class="btn g" href="${MEMORY.board}" target="_blank" rel="noopener">새 창에서 크게 보기</a>
+       </div>
+     </div>
+     <div class="mpv">${padFrame(420)}</div>
    </div>
  </div></section>
 
@@ -529,6 +546,42 @@ function render100(){
   :`<div class="empty" style="grid-column:1/-1">검색 결과가 없습니다. 다른 검색어를 입력해 보세요.</div>`;
 }
 
+/* ══════════════════ 당신에게 연어란 ══════════════════ */
+function padFrame(h){
+ return `<div class="padbox"><iframe src="${MEMORY.embed}" title="당신에게 연어란? — 참여 게시판"
+   loading="lazy" allow="camera;microphone;geolocation;clipboard-write"
+   style="height:${h}px"></iframe></div>`;
+}
+function pgMemory(){
+ return pagehead("o",41,"Your Salmon","당신에게 연어란","여러분이 기억하고 함께했던 「김해뮤직페스티벌 연어」를 남겨주세요. 21년 중 어느 해였어도 좋습니다.")+`
+ <section class="blk"><div class="wrap">
+   <div class="grid g3">
+     <div class="card"><div class="lbl">01</div><h3 style="margin-top:9px">누구나</h3><p>회원가입도, 로그인도 필요하지 않습니다. 아래 게시판 오른쪽 아래 <b>＋</b> 를 누르면 바로 글을 남길 수 있습니다.</p></div>
+     <div class="card"><div class="lbl">02</div><h3 style="margin-top:9px">무엇이든</h3><p>무대에 섰던 기억, 객석에서 본 장면, 부스에서 만난 사람, 비 오던 날. 한 줄이어도 좋고, 사진만 올려도 좋습니다.</p></div>
+     <div class="card"><div class="lbl">03</div><h3 style="margin-top:9px">함께</h3><p>다른 분이 남긴 이야기에 댓글과 이모지로 반응할 수 있습니다. 21년을 같이 통과한 사람들의 기록입니다.</p></div>
+   </div>
+   <div class="note" style="margin-top:28px;max-width:860px">
+     <p><strong>남겨주신 이야기는 운영진 확인 후 공개됩니다.</strong><br>
+     확인에 시간이 조금 걸릴 수 있습니다. 올리신 글이 바로 보이지 않아도 사라진 것이 아닙니다. 개인정보나 타인에게 상처가 되는 내용은 공개하지 않습니다.</p>
+   </div>
+ </div></section>
+
+ <section class="blk"><div class="wrap">
+   <div class="shead"><div class="lbl">Board</div><h2>이야기 남기기</h2></div>
+   <div style="margin-top:22px">${padFrame(720)}</div>
+   <p class="cap">게시판이 보이지 않거나 휴대폰에서 좁게 보인다면 <a href="${MEMORY.board}" target="_blank" rel="noopener">새 창에서 열기</a>를 눌러주세요.</p>
+   <div style="margin-top:18px"><a class="btn p" href="${MEMORY.board}" target="_blank" rel="noopener">새 창에서 열기 ${IC_ARROW}</a></div>
+ </div></section>
+
+ <section class="blk tex">${TEX("g",42,' data-dens="0.55" data-fade="0.7"')}<div class="wrap">
+   <div class="shead"><div class="lbl">Why</div><h2>기록이 남아야 다음 회차가 있습니다</h2></div>
+   <p class="slead">21년간 연어를 지나간 사람의 수는 셀 수 있지만, 그 하루가 각자에게 무엇이었는지는 아무도 적어두지 않았습니다.</p>
+   <div style="margin-top:22px;max-width:820px;color:var(--tx-2);font-size:16px">
+     <p>여기 모인 문장은 제21회 현장 기록과 「김해컬쳐매거진 제7호 — 연어가 남긴 것」, 그리고 미니다큐에 인용될 수 있습니다. 인용을 원하지 않으시면 글 안에 「인용 사양」이라고 적어주세요. 그대로 지키겠습니다.</p>
+   </div>
+ </div></section>`;
+}
+
 const INFO_TABS=[["notice","공지사항"],["community","커뮤니티"],["magazine","김해컬쳐매거진"],["gallery","연어갤러리"],["shop","연어상점"],["cheer","치어리더"]];
 function pgInfo(sub){
  const S=sub||"notice"; let body="";
@@ -703,6 +756,7 @@ function route(){
  else if(seg[0]==="program"){html=pgProgram(seg[1]);navKey="/program";}
  else if(seg[0]==="booth"){html=pgBooth();navKey="/booth";}
  else if(seg[0]==="salmon100"){html=pgSalmon100();navKey="/salmon100";}
+ else if(seg[0]==="memory"){html=pgMemory();navKey="/memory";}
  else if(seg[0]==="info"){html=pgInfo(seg[1]);navKey="/info";}
  else if(seg[0]==="post"){html=pgPost(seg[1],seg[2]);navKey="/info";}
  else if(seg[0]==="admin"){html=pgAdmin();navKey="";}
