@@ -556,13 +556,13 @@ function pgMemory(){
  return pagehead("o",41,"Your Salmon","당신에게 연어란","여러분이 기억하고 함께했던 「김해뮤직페스티벌 연어」를 남겨주세요. 21년 중 어느 해였어도 좋습니다.")+`
  <section class="blk"><div class="wrap">
    <div class="grid g3">
-     <div class="card"><div class="lbl">01</div><h3 style="margin-top:9px">누구나</h3><p>회원가입도, 로그인도 필요하지 않습니다. 아래 게시판 오른쪽 아래 <b>＋</b> 를 누르면 바로 글을 남길 수 있습니다.</p></div>
+     <div class="card"><div class="lbl">01</div><h3 style="margin-top:9px">누구나</h3><p>회원가입도, 로그인도 필요하지 않습니다. 아래 게시판 오른쪽 아래 <b>＋</b> 를 누르면 바로 글을 남길 수 있고, 올린 글은 그 자리에서 바로 보입니다.</p></div>
      <div class="card"><div class="lbl">02</div><h3 style="margin-top:9px">무엇이든</h3><p>무대에 섰던 기억, 객석에서 본 장면, 부스에서 만난 사람, 비 오던 날. 한 줄이어도 좋고, 사진만 올려도 좋습니다.</p></div>
      <div class="card"><div class="lbl">03</div><h3 style="margin-top:9px">함께</h3><p>다른 분이 남긴 이야기에 댓글과 이모지로 반응할 수 있습니다. 21년을 같이 통과한 사람들의 기록입니다.</p></div>
    </div>
    <div class="note" style="margin-top:28px;max-width:860px">
-     <p><strong>남겨주신 이야기는 운영진 확인 후 공개됩니다.</strong><br>
-     확인에 시간이 조금 걸릴 수 있습니다. 올리신 글이 바로 보이지 않아도 사라진 것이 아닙니다. 개인정보나 타인에게 상처가 되는 내용은 공개하지 않습니다.</p>
+     <p><strong>올리시면 바로 보입니다. 승인을 기다릴 필요가 없습니다.</strong><br>
+     현장에서 쓰고 바로 확인할 수 있도록 승인 절차를 두지 않았습니다. 대신 전화번호·주소 같은 개인정보는 적지 말아주세요. 타인에게 상처가 되는 글은 운영진이 지울 수 있습니다.</p>
    </div>
  </div></section>
 
