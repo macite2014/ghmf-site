@@ -582,6 +582,75 @@ function pgMemory(){
  </div></section>`;
 }
 
+
+/* ══════════════════ 김뮤페 연어 플레이리스트 ══════════════════ */
+const PL_STATE={i:0};
+function plEmbed(it){
+ return `https://www.youtube.com/embed/videoseries?list=${it.id}`;
+}
+function plLink(it){
+ return `https://www.youtube.com/playlist?list=${it.id}`;
+}
+function pgPlaylist(sub){
+ const n=PLAYLISTS.items.findIndex(x=>x.no===String(sub));
+ PL_STATE.i = n>=0 ? n : 0;
+ const cur=PLAYLISTS.items[PL_STATE.i];
+ return pagehead("p",51,"Playlist","김뮤페 연어 플레이리스트","0번부터 6번까지 일곱 개의 목록. 각 12곡씩, 연어의 하루를 시간 순서로 따라갑니다.")+`
+ <section class="blk"><div class="wrap">
+   <div class="plwrap">
+     <div class="plnow">
+       <div class="lbl">Now Playing</div>
+       <h2 id="plTitle"><span class="pn">${esc(cur.no)}</span>${esc(cur.t)}</h2>
+       <p id="plDesc">${esc(cur.d)}</p>
+       <div class="cta" style="margin-top:18px">
+         <a class="btn p" id="plOpen" href="${plLink(cur)}" target="_blank" rel="noopener">유튜브에서 열기 ${IC_ARROW}</a>
+         <a class="btn g" href="${PLAYLISTS.channel}" target="_blank" rel="noopener">채널 전체 보기</a>
+       </div>
+       <p class="cap" style="margin-top:14px">선곡 · 제작 ${esc(PLAYLISTS.maker)}</p>
+     </div>
+     <div class="plvid"><iframe id="plFrame" src="${plEmbed(cur)}"
+       title="김뮤페 연어 플레이리스트" loading="lazy" allowfullscreen
+       allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe></div>
+   </div>
+ </div></section>
+
+ <section class="blk"><div class="wrap">
+   <div class="shead"><div class="lbl">7 Lists</div><h2>재생목록 0 — 6</h2></div>
+   <p class="slead">누르면 위 재생창에서 바로 재생됩니다. 유튜브에서 열어 저장해 두셔도 됩니다.</p>
+   <div class="plgrid" style="margin-top:30px">
+     ${PLAYLISTS.items.map((it,i)=>`<article class="plcard ${it.c}${i===PL_STATE.i?" on":""}" data-pl="${i}" role="button" tabindex="0">
+       <div class="n">${esc(it.no)}</div>
+       <div class="b">
+         <h3>${esc(it.t)}</h3>
+         <p>${esc(it.d)}</p>
+         <div class="m"><span>${esc(it.n)}곡</span><a href="${plLink(it)}" target="_blank" rel="noopener" class="yt">유튜브에서 열기 ↗</a></div>
+       </div>
+     </article>`).join("")}
+   </div>
+ </div></section>
+
+ <section class="blk tex">${TEX("g",52,' data-dens="0.55" data-fade="0.7"')}<div class="wrap">
+   <div class="shead"><div class="lbl">Why</div><h2>라인업보다 먼저 듣는 방법</h2></div>
+   <p class="slead">축제 하루는 열두 시간이지만, 그 하루를 기다리는 시간은 일 년입니다.</p>
+   <div style="margin-top:22px;max-width:820px;color:var(--tx-2);font-size:16px">
+     <p>일곱 개 목록은 연어의 하루를 시간 순서로 따라갑니다. 낮의 봉황대에서 시작해 돗자리와 마켓을 지나 밤의 무대로 넘어갑니다. 10월 17일에 현장에서 들을 소리를 미리 만나두는 자리입니다.</p>
+     <p style="margin-top:18px">목록은 계속 늘어납니다. 올해 무대에 섰던 팀, 21년간 이 무대를 지나간 사람들의 음원을 차차 더합니다.</p>
+   </div>
+ </div></section>`;
+}
+function plSelect(i){
+ const it=PLAYLISTS.items[i]; if(!it) return;
+ PL_STATE.i=i;
+ const f=$("#plFrame"), t=$("#plTitle"), d=$("#plDesc"), o=$("#plOpen");
+ if(f) f.src=plEmbed(it)+"&autoplay=1";
+ if(t) t.innerHTML=`<span class="pn">${esc(it.no)}</span>${esc(it.t)}`;
+ if(d) d.textContent=it.d;
+ if(o) o.href=plLink(it);
+ $$(".plcard").forEach((c,k)=>c.classList.toggle("on",k===i));
+ const w=$(".plwrap"); if(w) w.scrollIntoView({behavior:"smooth",block:"center"});
+ if(history.replaceState) history.replaceState(null,"","#/playlist/"+it.no);
+}
+
 const INFO_TABS=[["notice","공지사항"],["community","커뮤니티"],["magazine","김해컬쳐매거진"],["gallery","연어갤러리"],["shop","연어상점"],["cheer","치어리더"]];
 function pgInfo(sub){
  const S=sub||"notice"; let body="";
@@ -757,6 +826,7 @@ function route(){
  else if(seg[0]==="booth"){html=pgBooth();navKey="/booth";}
  else if(seg[0]==="salmon100"){html=pgSalmon100();navKey="/salmon100";}
  else if(seg[0]==="memory"){html=pgMemory();navKey="/memory";}
+ else if(seg[0]==="playlist"){html=pgPlaylist(seg[1]);navKey="/playlist";}
  else if(seg[0]==="info"){html=pgInfo(seg[1]);navKey="/info";}
  else if(seg[0]==="post"){html=pgPost(seg[1],seg[2]);navKey="/info";}
  else if(seg[0]==="admin"){html=pgAdmin();navKey="";}
@@ -769,6 +839,13 @@ function route(){
  paintAll(); texWatch();
 
  $$("[data-tab]").forEach(b=>b.onclick=()=>location.hash="#/program/"+b.dataset.tab);
+ if(seg[0]==="playlist"){
+  $$("[data-pl]").forEach(c=>{
+   const go=e=>{ if(e.target.closest("a.yt")) return; plSelect(+c.dataset.pl); };
+   c.onclick=go;
+   c.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();go(e);} };
+  });
+ }
  $$("[data-info]").forEach(b=>b.onclick=()=>location.hash="#/info/"+b.dataset.info);
  if(seg[0]==="salmon100"){
   render100();
